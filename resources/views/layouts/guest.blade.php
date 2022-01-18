@@ -76,8 +76,9 @@
 
                                 <li class="menu-item lang-menu menu-item-has-children parent">
                                     <a title="English" href="#"><span class="img label-before"><img
-                                                src="assets/images/lang-en.png" alt="lang-en"></span>English<i
-                                            class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                src="{{ asset('assets/images/lang-en.png') }}"
+                                                alt="lang-en"></span>English<i class="fa fa-angle-down"
+                                            aria-hidden="true"></i></a>
                                     <ul class="submenu lang">
                                         <li class="menu-item"><a title="hungary" href="#"><span
                                                     class="img label-before"><img
@@ -441,7 +442,8 @@
                                     <h3 class="item-header">We Using Safe Payments:</h3>
                                     <div class="item-content">
                                         <div class="wrap-list-item wrap-gallery">
-                                            <img src="{{ asset('assets/images/payment.png') }}" style="max-width: 260px;">
+                                            <img src="{{ asset('assets/images/payment.png') }}"
+                                                style="max-width: 260px;">
                                         </div>
                                     </div>
                                 </div>
