@@ -24,29 +24,40 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel-body">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Category Name</th>
-                                <th>Slug</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($categories as $category)
+                    <div class="panel-body">
+                        @if (Session::has('message'))
+                            <div class="alert alert-success" role="alert">{{ Session::get('message') }}</div>
+                        @endif
+                        <table class="table table-striped">
+                            <thead>
                                 <tr>
-                                    <td>{{ $category->id }}</td>
-                                    <td>{{ $category->name }}</td>
-                                    <td>{{ $category->slug }}</td>
+                                    <th>ID</th>
+                                    <th>Category Name</th>
+                                    <th>Slug</th>
+                                    <th>Action</th>
                                 </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($categories as $category)
+                                    <tr>
+                                        <td>{{ $category->id }}</td>
+                                        <td>{{ $category->name }}</td>
+                                        <td>{{ $category->slug }}</td>
+                                        <td>
+                                            <a
+                                                href="{{ route('admin.editcategory', ['category_slug' => $category->slug]) }}">
+                                                <i class="fa fa-edit fa-2x"></i></a>
+                                            <a href="#" wire:click.prevent="deleteCategory({{ $category->id }})"
+                                                style="margin-left: 10px"><i
+                                                    class="fa fa-times fa-2x text-danger"></i></a>
+                                        </td>
+                                    </tr>
 
-                            @endforeach
-                        </tbody>
-                    </table>
-                    {{ $categories->links() }}
+                                @endforeach
+                            </tbody>
+                        </table>
+                        {{ $categories->links() }}
+                    </div>
                 </div>
             </div>
         </div>
