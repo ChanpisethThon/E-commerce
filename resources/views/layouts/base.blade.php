@@ -53,8 +53,9 @@
 
                                 <li class="menu-item lang-menu menu-item-has-children parent">
                                     <a title="English" href="#"><span class="img label-before"><img
-                                                src="{{ asset('assets/images/lang-en.png') }}" alt="lang-en"></span>English<i
-                                            class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                src="{{ asset('assets/images/lang-en.png') }}"
+                                                alt="lang-en"></span>English<i class="fa fa-angle-down"
+                                            aria-hidden="true"></i></a>
                                     <ul class="submenu lang">
                                         <li class="menu-item"><a title="hungary" href="#"><span
                                                     class="img label-before"><img
@@ -198,7 +199,9 @@
                                     <a href="#" class="link-direction">
                                         <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                                         <div class="left-info">
-                                            <span class="index">4 items</span>
+                                            @if (Cart::count() > 0)
+                                                <span class="index">{{ Cart::count() }} items</span>
+                                            @endif
                                             <span class="title">CART</span>
                                         </div>
                                     </a>
