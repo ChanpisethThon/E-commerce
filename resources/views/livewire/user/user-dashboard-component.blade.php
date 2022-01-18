@@ -1,3 +1,3 @@
 <div>
-    {{-- Be like water. --}}Customer
+    <h1>Customer Dashboard</h1>
 </div>
