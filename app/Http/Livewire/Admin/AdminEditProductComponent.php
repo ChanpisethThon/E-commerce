@@ -43,7 +43,7 @@ class AdminEditProductComponent extends Component
         $this->image = $product->image;
         $this->category_id = $product->category_id;
         $this->newimage = $product->newimage;
-        $this->product_id = $product->product_id;
+        $this->product_id = $product->id;
     }
 
     public function generateSlug()
@@ -54,7 +54,6 @@ class AdminEditProductComponent extends Component
     public function updateProduct()
     {
         $product = Product::find($this->product_id);
-        $product = new Product();
         $product->name = $this->name;
         $product->slug = $this->slug;
         $product->short_description = $this->short_description;
@@ -68,7 +67,7 @@ class AdminEditProductComponent extends Component
         if ($this->newimage) {
             $imageName = Carbon::now()->timestamp . '.' . $this->newimage->extension();
             $this->newimage->storeAs('products', $imageName);
-            $product->newimage = $imageName;
+            $product->image = $imageName;
         }
         $product->category_id = $this->category_id;
         $product->save();
