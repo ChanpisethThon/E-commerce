@@ -7,7 +7,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-md-6">
-                                <h3><b>Edit Category</b></h3>
+                                <h4><b>Edit Category</b></h4>
                             </div>
                             <div class="col-md-6">
                                 <a href="{{ route('admin.categories') }}" class="btn btn-success pull-right">All
