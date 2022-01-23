@@ -105,6 +105,8 @@
                                                             href="{{ route('admin.categories') }}">Categories</a> </li>
                                                     <li class="menu-item"><a title="Products"
                                                             href="{{ route('admin.products') }}">All Products</a> </li>
+                                                    <li class="menu-item"><a title="All Coupons"
+                                                            href="{{ route('admin.coupons') }}">All Coupons</a> </li>
                                                     <li class="menu-item">
                                                         <a href="{{ route('logout') }}"
                                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
@@ -152,8 +154,7 @@
                         <div class="mid-section main-info-area">
 
                             <div class="wrap-logo-top left-section">
-                                <a href="/" class="link-to-home"><img src="{{ asset('assets/images/logo-top-1.png') }}"
-                                        alt="mercado"></a>
+                                <a href="#" class="link-to-home"><img src="{{ 'assets/logo.png' }}" alt="mercado"></a>
                             </div>
 
                             <div class="wrap-search center-section">
@@ -560,7 +561,7 @@
                 <div class="coppy-right-box">
                     <div class="container">
                         <div class="coppy-right-item item-left">
-                            <p class="coppy-right-text">Copyright © 2020 Surfside Media. All rights reserved</p>
+                            <p class="coppy-right-text">Copyright © 2020. All rights reserved</p>
                         </div>
                         <div class="coppy-right-item item-right">
                             <div class="wrap-nav horizontal-nav">
